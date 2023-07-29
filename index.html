@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roni's English Teacher</title>
+
+
+    <link rel="stylesheet" href="myStyle.css">
+    <link rel='stylesheet' href='https://unpkg.com/emoji.css/dist/emoji.min.css'>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script/words.js"></script>
+    <script src="script/myScript.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <div class="container backColor">
+            <div class="jumbotron-fluid m-4 position-relative">
+                <div id="sound">
+                    <p class="ec ec-loud-sound"></p>
+                    <p class="ec ec-mute hide"></p>
+                </div>
+                <h2 class="reduce-size text-center font-weight-bold text-dark">Who Want's to be an English-man</h2>
+            </div>
+        </div>
+    </header>
+
+    <div class="container mt-4">
+        <div class="row" id="main">
+            <div id="leftDiv" class="col-md-3 d-flex flex-column align-items-center align-items-md-baseline">
+                <h3 class="pr-lg-2 reduce-size">Roni Yehoshua</h3>
+                <h4 class="reduce-size">Progress: <span id="progress"></span>%</h4>
+                <h4 class="reduce-size">Hot strick: <span id="strick">0</span></h4>
+                <h4 class="reduce-size">Best strick: <span id="bestStrick">0</span></h4>
+            </div>
+
+
+            <div id="rightDiv" class="col-md d-flex justify-content-center mt-3 m-md-0">
+
+                <div class="card bg-transparent text-center">
+                    <h3 class="h-word reduce-size">The next word is:</h3>
+                    <div class="position-relative">
+                        <img src="images/text-box.png" class="card-img text-pic">
+                        <h3 class="word-place word reduce-size" id="question"></h3>
+                    </div>
+
+                    <div class="card-body">
+                        <div id="myAnsCont" class="d-flex justify-content-between align-items-center">
+                            <input type="text" id="myAnswer" placeholder="Your answer" class="text-center w-75">
+                            <input type="button" class="btn btn-info" value="Check" id="btnCheck">
+                        </div>
+
+                        <div id="right-Container" class="hide">
+
+                            <h3 class="h-word reduce-size ">The answer is:</h3>
+                            <div class="position-relative" id="rightAns">
+                                <img src="images/text-box.png" class="card-img text-pic">
+                                <h3 class="reduce-size word-place" id="translated">hello</h3>
+                            </div>
+
+                            <div class="wrapper mb-4">
+                                <h5 class=".reduce-size">Do i know?</h5>
+                                <div class="cbxContainer">
+                                    <span class="ec ec--1"></span>
+    
+                                    <input type="checkbox" id="cup" />
+                                    <label for="cup"></label>
+    
+                                    <span class="ec ec-plus1"></span>
+    
+                                </div>
+                            </div>
+    
+                        </div>
+
+                        
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Audio -->
+    <audio id="mscWin">
+        <source  src="music/Win.mp3" type="audio/mp3">
+    </audio>
+    <audio id="mscLose">
+        <source  src="music/Lose.mp3" type="audio/mp3">
+    </audio>
+    <audio id="mscOpen">
+        <source  src="music/Open.mp3" type="audio/mp3">
+    </audio>
+
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-dialog-centered">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title m-auto">Welcome to <b class="text-primary text-uppercase" >"English for beutifaul"</b></h4>
+                </div>
+                <div class="modal-body text-center">
+                    <p>For you to be a champion, you need to practice the craft of the English language.</p>
+                </div>
+                <div class="modal-footer justify-content-center">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">So lets get started</button>
+                    <button id="btnQuiet" type="button" class="btn btn-danger" data-dismiss="modal">For quiet start :)</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    </div>
+
+
+</body>
+
+</html>
