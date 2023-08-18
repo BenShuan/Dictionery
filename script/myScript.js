@@ -1,3 +1,4 @@
+
 var knowWords = [],
   strickcount = 0,
   bestStrick = 0,
@@ -100,6 +101,7 @@ const getData = () => {
   if (localStorage.bestStrick != undefined) {
     bestStrick = JSON.parse(localStorage.bestStrick);
   }
+
 
   knowWords.map((key)=>{
     words[key].complited=true;
